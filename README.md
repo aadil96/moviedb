@@ -8,3 +8,17 @@ Features
 - View movie details such as plot, cast, and ratings
 
 - Add movies to a favorites list
+
+Folder Structure
+
+    root/
+    ├── index.html
+    ├── movie.html
+    ├── favorites.html
+    ├── css/
+    │   └── styles.css
+    └── js/
+        ├── app.js
+        ├── movie.js
+        └── favorites.js
+
