@@ -26,11 +26,7 @@ export function displayFavoriteMovie(movie) {
     btn.addEventListener("click", () => removeFromFavorites(movie.imdbID));
 
     clickableElement.addEventListener("click", () => {
-        if (isFavoritePage()) {
-            window.location.href = `movie.html?id=${movie.imdbID}`;
-        } else {
-            window.location.href = `favorites.html`;
-        }
+        window.location.href = `movie.html?id=${movie.imdbID}`;
     });
     movieElement.appendChild(clickableElement);
     movieElement.appendChild(btn);
