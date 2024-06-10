@@ -1,6 +1,7 @@
 import { API_KEY, favoritesList } from "./constants.js";
 
-const isFavoritePage = () => window.location.pathname.includes("/favorites.html");
+const isFavoritePage = () =>
+    window.location.pathname.includes("/favorites.html");
 
 export function displayFavoriteMovie(movie) {
     const movieElement = document.createElement("div");
@@ -20,9 +21,9 @@ export function displayFavoriteMovie(movie) {
         
     `;
 
-    unclickableElement.innerHTML = `<div class='unclickable'>
-            <button onclick="removeFromFavorites('${movie.imdbID}')">Remove</button>
-        </div>`;
+    const btn = document.createElement("button");
+    btn.textContent = "Remove";
+    btn.addEventListener("click", () => removeFromFavorites(movie.imdbID));
 
     clickableElement.addEventListener("click", () => {
         if (isFavoritePage()) {
@@ -32,7 +33,7 @@ export function displayFavoriteMovie(movie) {
         }
     });
     movieElement.appendChild(clickableElement);
-    movieElement.appendChild(unclickableElement);
+    movieElement.appendChild(btn);
     favoritesList.appendChild(movieElement);
 }
 
