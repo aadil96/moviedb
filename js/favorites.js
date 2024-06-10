@@ -1,6 +1,6 @@
 import { API_KEY, favoritesList } from "./constants.js";
 
-isFavoritePage = () => window.location.pathname.includes("/favorites.html");
+const isFavoritePage = () => window.location.pathname.includes("/favorites.html");
 
 export function displayFavoriteMovie(movie) {
     const movieElement = document.createElement("div");
