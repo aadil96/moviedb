@@ -76,8 +76,8 @@ if (favorites.length > 0) {
     });
 
     const favoriteLink = document.createElement("a");
-    favoriteLink.setAttribute("href", "/favorites.html");
-    favoriteLink.textContent = 'View all'
+    favoriteLink.setAttribute("href", "favorites.html");
+    favoriteLink.textContent = "View all";
 
     document.querySelector(".favorites-container").append(favoriteLink);
 } else {
